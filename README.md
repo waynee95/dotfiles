@@ -4,14 +4,14 @@
 
 ## System Setup
 
-**distro** ubuntu
-**wm** [stumpwm](https://stumpwm.github.io/)
-**terminal** termite
-**browser** firefox
-**shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)
-k*editor** vim
-**font** Courier Code
-**launcher** dmenu
+**distro** ubuntu\
+**wm** [stumpwm](https://stumpwm.github.io/)\
+**terminal** termite\
+**browser** firefox\
+**shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)\
+k*editor** vim\
+**font** Courier Code\
+**launcher** dmenu\
 
 ## Usage
 
