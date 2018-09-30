@@ -1,0 +1,7 @@
+vim/.vim/.netrwist
+vim/.vim/autoload
+vim/.vim/bundle
+vim/.vim/colors
+fish/.config/fish/fish_history
+fish/.config/fish/fishd.*
+
