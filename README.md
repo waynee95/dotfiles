@@ -9,7 +9,7 @@
 **terminal** termite\
 **browser** firefox\
 **shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)\
-k*editor** vim\
+**editor** vim\
 **font** Courier Code\
 **launcher** dmenu\
 
