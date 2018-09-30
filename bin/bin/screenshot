@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# take a screenshot of the window that gets selected after executing the script
+scrot -s $HOME/Pictures/Screenshots/"$(date "+%Y-%m-%d %H:%M:%S")".png
