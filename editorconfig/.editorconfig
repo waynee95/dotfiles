@@ -29,6 +29,9 @@ indent_size = 2
 # unset the trimming of trailing whitespaces
 trim_trailing_whitespace = false
 
+# wrap too long lines
+max_line_length = 80
+
 [*.json]
 # ident files of type JSON by 2 spaces
 # see https://docs.npmjs.com/misc/coding-style#indentation
