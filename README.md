@@ -20,7 +20,7 @@ I use [GNU Stow](https://gnu.org/software/stow/) to manage my dotfiles.
 ```bash
 $ git clone https://github.com/waynee95/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
-$ stow bash fish # plus whatever else you'd like
+$ stow bash fish vim # plus whatever else you'd like
 ```
 
 It will create a symbolic link for each file in your `$HOME` directory. To
