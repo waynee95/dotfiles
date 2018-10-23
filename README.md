@@ -6,12 +6,11 @@
 
 * **distro** ubuntu
 * **wm** [stumpwm](https://stumpwm.github.io/)
-* **terminal** termite
+* **terminal** termite and [tilix](https://github.com/gnunn1/tilix/)
 * **browser** firefox
 * **shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)
 * **editor** vim
 * **font** Courier Code
-* **launcher** dmenu
 
 ## Usage
 
