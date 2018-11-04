@@ -16,3 +16,5 @@ alias dots "cd $HOME/.dotfiles"
 alias docs "cd $HOME/Documents"
 alias drop "cd $HOME/Dropbox"
 
+alias b "cd .."
+alias bb "cd ../.."
