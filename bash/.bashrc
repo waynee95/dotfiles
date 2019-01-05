@@ -10,4 +10,3 @@ if [ -f "/usr/bin/fish" ]; then
   fi
   echo 'Fish exited with an error, dropping to bash shell'
 fi
-
