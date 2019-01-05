@@ -6,6 +6,7 @@ set -x PATH ~/bin $PATH
 set -x EDITOR vim
 set -x BROWSER firefox
 set -x TERMINAL termite
+set -x TERM screen-256color
 
 # set locale
 set -x LC_ALL en_US.UTF-8
