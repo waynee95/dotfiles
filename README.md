@@ -6,7 +6,7 @@
 
 * **distro** ubuntu
 * **wm** [stumpwm](https://stumpwm.github.io/)
-* **terminal** termite
+* **terminal** termite together with tmux
 * **browser** firefox
 * **shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)
 * **editor** vim
