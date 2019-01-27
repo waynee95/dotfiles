@@ -1,6 +1,7 @@
 # https://fishshell.com/docs/current/faq.html#faq-envvar
 # add custom scripts to path
 set -x PATH ~/bin $PATH
+set -x PATH ~/.local/bin $PATH
 
 # globals
 set -x EDITOR vim
