@@ -10,6 +10,8 @@ PLUGINS=(
   "sheerun/vim-polyglot"
   "editorconfig/editorconfig-vim"
   "mattn/emmet-vim"
+  "Shougo/vimproc.vim"
+  "Shougo/unite.vim"
 )
 
 mkdir -p $PLUGIN_DIR

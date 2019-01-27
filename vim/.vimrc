@@ -129,6 +129,15 @@ set expandtab
 " change the leader key to space
 let mapleader="\<Space>"
 
+" file searching like ctrlp.vim
+nnoremap <C-P> :Unite file_rec/async<CR>
+
+" content searching like ack.vim
+nnoremap <Space>/ :Unite grep:.<CR>
+
+" buffer switching
+nnoremap <Space>s :Unite -quick-match buffer<CR>
+
 " ------------------------
 " filetype specifics
 " ------------------------
