@@ -1,42 +1,13 @@
-# see http://editorconfig.org/#file-format-details
-
-# stop searching for other .editorconfig's when reaching this file
+# see http://editorconfig.org
 root = true
 
 [*]
-# indent every filetype with spaces
-indent_style = space
-
-# number of columns used for each indentation level
-indent_size = 4
-
-# use linefeed as the default line break
-end_of_line = lf
-
-# default character set for every file is utf-8
 charset = utf-8
-
-# always remove trailing whitespaces for every filetype
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
 trim_trailing_whitespace = true
 
-# ensure file ends with a newline when saving
-insert_final_newline = true
-
 [*.md]
-# indent Markdown files by 2 spaces
-indent_size = 2
-
-# unset the trimming of trailing whitespaces
 trim_trailing_whitespace = false
-
-# wrap too long lines
-max_line_length = 80
-
-[*.json]
-# ident files of type JSON by 2 spaces
-# see https://docs.npmjs.com/misc/coding-style#indentation
-indent_size = 2
-
-[Makefile]
-# use tabs for indentation (Makefiles require tabs)
-indent_style = tab
