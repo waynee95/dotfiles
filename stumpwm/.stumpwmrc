@@ -1,0 +1,13 @@
+;; chnage bg to black
+(stumpwm:run-shell-command "xsetroot -bg #000000")
+
+;; change mouse cursor to an arrow
+(stumpwm:run-shell-command "xsetroot -cursor_name left_ptr")
+
+;; focus should follow mouse
+(setf *mouse-focus-policy* :click) ;; :click, :ignore, :sloppy
+
+;; bugfix for scrolling
+(setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
+
+; vim: ft=lisp
