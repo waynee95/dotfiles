@@ -1,5 +1,5 @@
 ;; chnage bg to black
-(stumpwm:run-shell-command "xsetroot -bg #000000")
+(stumpwm:run-shell-command "xsetroot -bg 000000")
 
 ;; change mouse cursor to an arrow
 (stumpwm:run-shell-command "xsetroot -cursor_name left_ptr")
