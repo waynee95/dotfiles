@@ -156,3 +156,6 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
+" make sure to open links via gx with firefox
+let g:netrw_browsex_viewer = "firefox"
+
