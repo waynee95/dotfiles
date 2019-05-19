@@ -1,3 +1,5 @@
+(stumpwm:run-shell-command "xinput set-prop \"USB Optical Mouse\" \"libinput Natural Scrolling Enabled\" 1")
+
 ;; chnage bg to black
 (stumpwm:run-shell-command "xsetroot -bg 000000")
 
