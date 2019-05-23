@@ -1,0 +1,11 @@
+set number relativenumber
+set showmode
+set incsearch
+set hlsearch
+set matchpairs
+set ignorecase
+set scrolloff=3
+set sidescrolloff=3
+
+" https://stackoverflow.com/questions/27898407/intellij-idea-with-ideavim-cannot-copy-text-from-another-source/27928635#27928635
+set clipboard+=unnamed
