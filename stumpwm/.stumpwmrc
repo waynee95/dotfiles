@@ -1,6 +1,7 @@
+;; invert mouse scrolling
 (stumpwm:run-shell-command "xinput set-prop \"USB Optical Mouse\" \"libinput Natural Scrolling Enabled\" 1")
 
-;; chnage bg to black
+;; change bg to black
 (stumpwm:run-shell-command "xsetroot -bg 000000")
 
 ;; change mouse cursor to an arrow
@@ -11,5 +12,11 @@
 
 ;; bugfix for scrolling
 (setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
+
+(defcommand rr-vscode () ()
+  (run-or-raise "code" '(:class "Code")))
+
+(define-key *root-map* (kbd "e") "rr-vscode")
+(define-key *root-map* (kbd "C-e") "rr-vscode")
 
 ; vim: ft=lisp
