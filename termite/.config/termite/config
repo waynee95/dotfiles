@@ -16,35 +16,35 @@ cursor_blink = system
 cursor_shape = block
 browser = firefox
 
-# Project:    Nord Termite
-# Repository: https://github.com/arcticicestudio/nord-termite
+# Project:    termite-snazzy
+# Repository: https://github.com/kbobrowski/termite-snazzy
 # License:    MIT
 
 [colors]
-cursor = #d8dee9
-cursor_foreground = #2e3440
+foreground = rgb(239, 240, 235)
+foreground_bold = rgb(239, 240, 235)
+background = rgb(40, 42, 56)
 
-foreground = #d8dee9
-foreground_bold = #d8dee9
-background = #2e3440
+# If unset, will reverse foreground and background
+highlight = #2f2f2f
 
-highlight = #4c566a
+# Colors from original hyper-snazzy theme
+color0 = rgb(40,42,56)
+color1 = rgb(255,92,87)
+color2 = rgb(90,247,142)
+color3 = rgb(243,249,157)
+color4 = rgb(87,199,255)
+color5 = rgb(255,106,193)
+color6 = rgb(154,237,254)
+color7 = rgb(241,241,240)
 
-color0  = #3b4252
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #81a1c1
-color5  = #b48ead
-color6  = #88c0d0
-color7  = #e5e9f0
-color8  = #4c566a
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #81a1c1
-color13 = #b48ead
-color14 = #8fbcbb
-color15 = #eceff4
+# Other default termite colors
+color9 = #dca3a3
+color10 = #c3bf9f
+color11 = #f0dfaf
+color12 = #94bff3
+color13 = #ec93d3
+color14 = #93e0e3
+color15 = #ffffff
 
 # vim: ft=dosini
