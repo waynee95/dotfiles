@@ -23,10 +23,6 @@ set noswapfile
 " see http://vimdoc.sourceforge.net/htmldoc/gui.html#clipboard
 set clipboard=unnamedplus
 
-" enable modelines
-" see http://vimdoc.sourceforge.net/htmldoc/options.html#modeline
-set modeline
-
 " ------------------------
 " visuals
 " -----------------------
