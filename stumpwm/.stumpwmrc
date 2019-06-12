@@ -19,4 +19,16 @@
 (define-key *root-map* (kbd "e") "rr-vscode")
 (define-key *root-map* (kbd "C-e") "rr-vscode")
 
+;; make focus follow split
+(defcommand sane-hsplit () ()
+  (hsplit)
+  (move-focus :right))
+
+(defcommand sane-vsplit () ()
+  (vsplit)
+  (move-focus :down))
+
+(define-key *root-map* (kbd "S") "sane-hsplit")
+(define-key *root-map* (kbd "s") "sane-vsplit")
+
 ; vim: ft=lisp
