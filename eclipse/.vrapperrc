@@ -1,0 +1,11 @@
+set number relativenumber
+set showmode
+set incsearch
+set hlsearch
+set matchpairs
+set ignorecase
+set scrolloff=3
+set sidescrolloff=3
+
+" https://stackoverflow.com/questions/26415479/how-do-i-copy-from-vrapper-on-eclipse-in-os-x-to-system-clipboard/26419417#26419417
+set clipboard+=unnamed
