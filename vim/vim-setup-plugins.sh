@@ -9,7 +9,6 @@ PLUGINS=(
   "tpope/vim-pathogen"
   "sheerun/vim-polyglot"
   "editorconfig/editorconfig-vim"
-  "mattn/emmet-vim"
   "Shougo/vimproc.vim"
   "Shougo/unite.vim"
 )
