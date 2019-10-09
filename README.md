@@ -28,18 +28,6 @@ delete it, you can use.
 ```bash
 $ stow -D fish 
 ```
-
-## Vim
-
-For vim I use the [monotone](https://github.com/Lokaltog/vim-monotone)
-colorscheme. At the moment I am only using a few plugins. They are managed by  
-[pathogen](https://github.com/tpope/vim-pathogen) and a simple bash script.
-
-```bash
-$ cd ~/.dotfiles/vim
-$ ./vim-setup-plugins.sh
-```
-
 ## Inspired by
 
 * https://github.com/JLErvin/dotfiles/
