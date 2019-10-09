@@ -1,157 +1,84 @@
-" ------------------------
-" plugins
-" -----------------------
-execute pathogen#infect()
+" Download plug.vim and put it in the autoload directory
+" See https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" ------------------------
-" general Config
-" ------------------------
+call plug#begin('~/.vim/plugged')
 
-" show filename in the window titlebar
-set title
+Plug 'sheerun/vim-polyglot'
+Plug 'editorconfig/editorconfig-vim'
 
-" automatically load files when a file changed
-set autoread
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-" dont beep
-set noerrorbells visualbell t_vb=
+Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
 
-" disable swp files
-set noswapfile
-
-" enable the system clipboard
-" see http://vimdoc.sourceforge.net/htmldoc/gui.html#clipboard
-set clipboard=unnamedplus
-
-" ------------------------
-" visuals
-" -----------------------
+call plug#end()
 
 colorscheme monotone
 
-" make all lines show their relative number, except for current line
-set number relativenumber
+set title                           " Show file name in the titlebar
+set autoread                        " Automatically load files when changed
+set noerrorbells visualbell t_vb=   " Dont beep
+set noswapfile                      " Disable swap file
+set clipboard=unnamedplus           " See http://vimdoc.sourceforge.net/htmldoc/gui.html#clipboard
+set nowrap                          " Disable wrapping long lines automatically
+set lazyredraw                      " Render only when we need to
 
-" add visual reference at 80 char mark
-set colorcolumn=80
+set number relativenumber           " Show relative line number, except for current line
+set colorcolumn=81                  " Mark the 80 character column
+set showmatch                       " Highlight matching [{()}]
+set autoindent                      " Copy indent from last line when starting a new line
 
-" show the executing command
-set showcmd
+set incsearch                       " Highlight dynamically as pattern is typed
+set hlsearch                        " Hightlight all search matches
+set ignorecase                      " If a pattern contains an uppercase letter, it is case sensitive, otherwise not
+set smartcase
 
-" highlight matching [{()}]
-set showmatch
+set scrolloff=5                     " Minimum lines to keep above and below the cursor
+set sidescrolloff=5
 
-" redraw only when we need to
-set lazyredraw
+set wildmode=list:longest           " See https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
+set wildmenu                        " Use <Left> or <Righ> to navigate through the compoetion lists
+set wildignore+=**/node_modules/**  " Ignore some folders
+set wildignore+=**/.git/**
+set wildignore+=**/build/**
+set wildignore+=**/dist/**
 
-" dont wrap long lines
-set nowrap
+set splitbelow                      " More natural split opening
+set splitright
 
-" switch to normal line numbers, when in insert mode
-" see https://jeffkreeftmeijer.com/vim-number/#automatic-toggling-between-line-number-modes
+set tabstop=2                       " Set tabs as 2 spaces
+set shiftwidth=2
+set expandtab
+
+" Switch to normal line numbers, when in insert mode
+" See https://jeffkreeftmeijer.com/vim-number/#automatic-toggling-between-line-number-modes
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
 
-" ------------------------
-" searching
-" ------------------------
+let mapleader="\<Space>"
 
-" highlight dynamically as pattern is typed
-set incsearch
-
-" highlight all search matches
-set hlsearch
-
-" if a pattern contains an uppercase letter, it is case sensitive, otherwise not
-set ignorecase
-set smartcase
-
-" remove search hightlight, when pressing enter after searching
-" see https://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
+" See https://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
 nnoremap <CR> :nohlsearch<CR><CR>
 
-" ------------------------
-" scrolling
-" ------------------------
-
-" start scrolling 3 lines before horiz/vert border of window
-set scrolloff=3
-set sidescrolloff=3
-
-" ------------------------
-" wildmenu
-" ------------------------
-" see https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
-
-" expand wildmenu
-set wildmode=list:longest
-
-" use <Left> or <Righ> to navigate through the compoetion lists
-set wildmenu
-
-" ------------------------
-" split windows
-" ------------------------
-
-" easier split navigation
+" Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" more natural split opening
-set splitbelow
-set splitright
-
-" ------------------------
-" coding style
-" ------------------------
-
-" copy indent from last line when starting a new line
-set autoindent
-
-" set tabs as 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" ------------------------
-" mappings
-" ------------------------
-
-" change the leader key to space
-let mapleader="\<Space>"
-
-" file searching like ctrlp.vim
-nnoremap <C-P> :Unite file_rec/async<CR>
-
-" content searching like ack.vim
-nnoremap <Space>/ :Unite grep:.<CR>
-
-" buffer switching
-nnoremap <Space>s :Unite -quick-match buffer<CR>
-
-" ------------------------
-" filetype specifics
-" ------------------------
-
-" no autocompletion for these pattern
-set wildignore=.svn,.git
-
-" ------------------------
-" netrw
-" ------------------------
-" see https://shapeshed.com/vim-netrw/
-
+" See https://shapeshed.com/vim-netrw/
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-
-" make sure to open links via gx with firefox
-let g:netrw_browsex_viewer = "firefox"
-
+let g:netrw_browsex_viewer = "firefox" " Make sure to open links via gx with firefox
