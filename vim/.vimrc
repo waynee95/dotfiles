@@ -41,6 +41,7 @@ set smartcase
 
 set scrolloff=5                     " Minimum lines to keep above and below the cursor
 set sidescrolloff=5
+set backspace=2                     " Make backspace work like most other programs
 
 set wildmode=list:longest           " See https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
 set wildmenu                        " Use <Left> or <Righ> to navigate through the compoetion lists
