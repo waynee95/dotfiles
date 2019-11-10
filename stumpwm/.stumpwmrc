@@ -13,11 +13,10 @@
 ;; bugfix for scrolling
 (setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
 
-(defcommand rr-vscode () ()
-  (run-or-raise "code" '(:class "Code")))
+(defcommand run-term () ()
+  (stumpwm:run-shell-command "termite"))
 
-(define-key *root-map* (kbd "e") "rr-vscode")
-(define-key *root-map* (kbd "C-e") "rr-vscode")
+(define-key *root-map* (kbd "c") "run-term")
 
 ;; make focus follow split
 (defcommand sane-hsplit () ()
