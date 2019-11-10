@@ -5,6 +5,7 @@
     editor = vim
     # https://git-scm.com/docs/git-config#git-config-corewhitespace
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    askPass = ""
 [push]
     # https://git-scm.com/docs/git-config#git-config-pushdefault
     default = simple
@@ -12,7 +13,7 @@
     # https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
     showUntrackedFiles = all
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [color] # see https://nathanhoad.net/how-to-colours-in-git
     ui = auto
 [color "branch"]
@@ -31,6 +32,6 @@
     # see https://coderwall.com/p/euwpig/a-better-git-log
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     st = status
-	d = difftool
+    d = difftool
 [difftool]
-	prompt = false
+    prompt = false
