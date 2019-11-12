@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
 
