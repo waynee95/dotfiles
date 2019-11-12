@@ -4,13 +4,12 @@
 
 ## System Setup
 
-* **distro** ubuntu
+* **distro** [nixos](https://github.com/waynee95/nixos-config)
 * **wm** [stumpwm](https://stumpwm.github.io/)
 * **terminal** termite together with tmux
 * **browser** firefox
 * **shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)
 * **editor** vim
-* **font** Courier Code
 
 ## Usage
 
