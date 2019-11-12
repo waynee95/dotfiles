@@ -1,11 +1,11 @@
 ;; invert mouse scrolling
 (stumpwm:run-shell-command "xinput set-prop \"USB Optical Mouse\" \"libinput Natural Scrolling Enabled\" 1")
 
-;; change bg to black
-(stumpwm:run-shell-command "xsetroot -bg 000000")
-
 ;; change mouse cursor to an arrow
 (stumpwm:run-shell-command "xsetroot -cursor_name left_ptr")
+
+;; change bg to black
+(stumpwm:run-shell-command "xsetroot -solid black")
 
 ;; focus should follow mouse
 (setf *mouse-focus-policy* :click) ;; :click, :ignore, :sloppy
