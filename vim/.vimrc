@@ -10,11 +10,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
 
 call plug#end()
@@ -83,3 +80,6 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_browsex_viewer = "firefox" " Make sure to open links via gx with firefox
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
