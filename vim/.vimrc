@@ -80,5 +80,10 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_browsex_viewer = "firefox" " Make sure to open links via gx with firefox
 
+" Workaround for opening URLs with gx
+" See https://github.com/vim/vim/issues/4738#issuecomment-521506447
+nmap gx yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>
+
+" Ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
