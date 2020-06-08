@@ -10,8 +10,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
+Plug 'ap/vim-buftabline'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -40,8 +41,9 @@ set sidescrolloff=5
 set backspace=2                     " Make backspace work like most other programs
 
 set wildmode=list:longest           " See https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
-set wildmenu                        " Use <Left> or <Righ> to navigate through the compoetion lists
-set wildignore+=**/node_modules/**  " Ignore some folders
+set wildmenu
+set wildignore+=*/tmp/*
+set wildignore+=**/node_modules/**
 set wildignore+=**/.git/**
 set wildignore+=**/build/**
 set wildignore+=**/dist/**
@@ -85,5 +87,12 @@ let g:netrw_browsex_viewer = "firefox" " Make sure to open links via gx with fir
 nmap gx yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>
 
 " Ctrlp.vim
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<C-f>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_follow_symlinks = 1
+
+" Buftabline
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
