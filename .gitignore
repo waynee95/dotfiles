@@ -4,4 +4,4 @@ vim/.vim/bundle
 vim/.vim/colors
 fish/.config/fish/fish_history
 fish/.config/fish/fishd.*
-
+haskell/.ghc/ghci_history
