@@ -4,6 +4,8 @@
 ;; change mouse cursor to an arrow
 (stumpwm:run-shell-command "xsetroot -cursor_name left_ptr")
 
+(stumpwm:run-shell-command "python3 /home/waynee95/bin/dropbox start")
+
 ;; change bg to black
 (stumpwm:run-shell-command "xsetroot -solid black")
 
@@ -14,7 +16,7 @@
 (setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
 
 (defcommand run-term () ()
-  (stumpwm:run-shell-command "termite"))
+  (stumpwm:run-shell-command "kitty"))
 
 (define-key *root-map* (kbd "c") "run-term")
 
