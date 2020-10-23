@@ -14,9 +14,13 @@ Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
 Plug 'ap/vim-buftabline'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'arzg/vim-substrata'
+
 call plug#end()
 
-colorscheme monotone
+" colorscheme monotone
+colorscheme substrata
+syntax on
 
 set title                           " Show file name in the titlebar
 set autoread                        " Automatically load files when changed
@@ -96,3 +100,6 @@ let g:ctrlp_follow_symlinks = 1
 set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" Rift
+au BufRead,BufNewFile *.rift set filetype=rift
