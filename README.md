@@ -4,9 +4,9 @@
 
 ## System Setup
 
-* **distro** [nixos](https://github.com/waynee95/nixos-config)
+* **distro** ubuntu 
 * **wm** [stumpwm](https://stumpwm.github.io/)
-* **terminal** termite together with tmux
+* **terminal** kitty together with tmux
 * **browser** firefox
 * **shell** fish with [pure.fish](https://github.com/brandonweiss/pure.fish)
 * **editor** vim
