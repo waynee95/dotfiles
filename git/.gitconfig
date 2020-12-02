@@ -1,6 +1,9 @@
 [user]
     email = larsericmarquardt@mail.de
     name = waynee95
+[init]
+    # requites git version >= 2.28
+    defaultBranch = main
 [core]
     editor = vim
     # https://git-scm.com/docs/git-config#git-config-corewhitespace
