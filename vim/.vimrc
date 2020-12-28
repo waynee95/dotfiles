@@ -13,7 +13,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Lokaltog/vim-monotone', { 'dir': '~/.vim/colors/vim-monotone' }
 Plug 'ap/vim-buftabline'
 Plug 'ctrlpvim/ctrlp.vim'
-
 Plug 'arzg/vim-substrata'
 
 call plug#end()
@@ -101,5 +100,6 @@ set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
-" Rift
-au BufRead,BufNewFile *.rift set filetype=rift
+" Modeline
+set modeline
+
