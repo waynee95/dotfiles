@@ -50,6 +50,7 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/.git/**
 set wildignore+=**/build/**
 set wildignore+=**/dist/**
+set wildignore+=**/*.class
 
 set splitbelow                      " More natural split opening
 set splitright
