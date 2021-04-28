@@ -47,6 +47,7 @@ set wildmode=list:longest           " See https://stackoverflow.com/questions/95
 set wildmenu
 set wildignore+=*/tmp/*
 set wildignore+=**/node_modules/**
+set wildignore+=**/__pycache__/**
 set wildignore+=**/.git/**
 set wildignore+=**/build/**
 set wildignore+=**/dist/**
