@@ -18,6 +18,10 @@ antigen theme jackharrisonsherlock/common
 
 antigen apply
 
+common_current_dir() {
+  echo -n "%{$fg[$COMMON_COLORS_CURRENT_DIR]%}%~ "
+}
+
 COMMON_PROMPT_SYMBOL="λ"
 COMMON_COLORS_RETURN_STATUS_TRUE=green
 COMMON_COLORS_RETURN_STATUS_FALSE=magenta
