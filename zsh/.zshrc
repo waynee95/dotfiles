@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-source $HOME/.profile
+if [ -d "$HOM/.profile" ]; then
+  source $HOME/.profile
+fi
 
 # https://github.com/zsh-users/antigen#installation
 source $HOME/bin/antigen.zsh
