@@ -20,7 +20,10 @@
     showUntrackedFiles = all
 [diff]
     tool = vimdiff
-[color] # see https://nathanhoad.net/how-to-colours-in-git
+[merge]
+    tool = vimdiff
+[color]
+    # see https://nathanhoad.net/how-to-colours-in-git
     ui = auto
 [color "branch"]
     current = yellow reverse
@@ -45,4 +48,4 @@
 [grep]
     lineNumber = true
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
