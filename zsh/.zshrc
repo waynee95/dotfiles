@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-if [ -d "$HOM/.profile" ]; then
+if [ -f "$HOME/.profile" ]; then
   source $HOME/.profile
 fi
 
