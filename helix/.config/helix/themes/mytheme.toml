@@ -1,0 +1,3 @@
+inherits = "everforest_dark"
+
+"ui.virtual.inlay-hint" = { fg = "white", bg = "#424242" } 

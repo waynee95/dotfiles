@@ -1,11 +1,16 @@
-theme = "everforest_dark"
+theme = "mytheme"
 
 [editor]
 auto-pairs = false
 line-number = "relative"
 mouse = false
+rulers = [ 80 ]
 
 [editor.cursor-shape]
-insert = "underline"
+insert = "bar"
 normal = "block"
 select = "block"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
