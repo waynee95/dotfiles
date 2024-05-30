@@ -1,6 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[[ -n "$IN_NIX_SHELL" ]] && return
+
 # Start zsh
 if [ -f "/usr/bin/zsh" ]; then
   exec zsh
