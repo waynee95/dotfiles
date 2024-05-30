@@ -32,11 +32,19 @@ PROMPT='${NEWLINE}$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_g
 RPROMPT=''
 
 path+=(~/bin)
+path+=(~/.nix-profile/bin)
 path+=(~/.local/bin)
 path+=(~/.cabal/bin)
 path+=(~/.ghcup/bin)
+path+=(~/.cargo/bin)
 export PATH
+
+
+if [ -e /home/waynee95/.nix-profile/etc/profile.d/nix.sh ]; then
+  source /home/waynee95/.nix-profile/etc/profile.d/nix.sh;
+fi # added by Nix installer
 
 if [[ -z "$TMUX" ]]; then
   tmux attach ^/dev/null || tmux
 fi
+
